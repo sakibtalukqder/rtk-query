@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
 
     const menu = <>
-        <li className="font-bold text-xl">Simple Crude app With Rtk Query and JSON Server</li>
+        <li className="font-bold text-xl">Rtk Query and JSON Server</li>
     </>
 
     return (
