@@ -52,9 +52,24 @@ const Home = () => {
                                                 <td className="whitespace-nowrap px-6 py-4">{user.name}</td>
                                                 <td className="whitespace-nowrap px-6 py-4">{user.email}</td>
                                                 <td className="whitespace-nowrap px-6 py-4">
-                                                    <Link to={`/view/${user.id}`} className="btn btn-sm rounded-none">View</Link>
-                                                    <Link to={`/edit/${user.id}`} className="btn btn-primary btn-sm rounded-none">Edit</Link>
-                                                    <button onClick={() => handleDelete(user.id)} className="btn btn-error btn-sm rounded-none">Delete</button>
+
+                                                    <div className="dropdown dropdown-end">
+                                                        <div tabIndex={0} role="button" className="btn m-1 btn-sm">
+                                                            Action
+                                                        </div>
+                                                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                                            <li>
+                                                                <Link to={`/view/${user.id}`} className="btn btn-sm rounded-none bg-green-500">View</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to={`/edit/${user.id}`} className="btn btn-primary btn-sm rounded-none">Edit</Link>
+                                                            </li>
+                                                            <li>
+                                                                <button onClick={() => handleDelete(user.id)} className="btn btn-error btn-sm rounded-none">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
                                                 </td>
                                             </tr>
                                         ))
